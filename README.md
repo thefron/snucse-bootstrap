@@ -23,7 +23,7 @@ LESS 컴파일러는 npm을 이용하여 설치할 수 있다.
 
 LESS 컴파일러를 깔았으면, 커맨드라인에서
 
-    $ lessc ./less/main.less > theme.css
+    $ lessc ./less/main.less > main.css
 
 를 실행하여 컴파일된 결과물을 얻을 수 있다.
 
