@@ -385,3 +385,14 @@
     background-color: darken(@endColor, 10%) e("\9");
   }
 }
+.menu_iconize(@backgroundPosition) {
+  &::before {
+    display: inline-block;
+    content: "";
+    .square(14px);
+    background-image: url(img/glyphicons-halflings.png);
+    background-position: @backgroundPosition;
+    vertical-align: -20%;
+    margin-right: 5px;
+  }
+}

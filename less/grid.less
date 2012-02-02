@@ -1,1 +1,13 @@
 // Nothing yet
+@gridColumnWidth: 6.382978723%;
+@gridGutterWidth: 2.127659574%;
+
+// Redeclare the mixins
+.gridColumn() {
+  float: left;
+  margin-left: @gridGutterWidth;
+} 
+.fluidColumns(@columns: 1) {
+  width: @gridTotalWidth * ((((@gridGutterWidth+@gridColumnWidth)*@columns)-@gridGutterWidth)/(@gridRowWidth+@gridGutterWidth)) !important;
+  .gridColumn();
+}

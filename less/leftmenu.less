@@ -1,0 +1,114 @@
+#CommonLeftMenu {
+  list-style: none;
+  margin: 0;
+  border-bottom: 0;
+}
+#CafeMenuWrapper li {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 0px !important;
+  margin-bottom: -1px;
+  min-height: initial;
+  list-style-image: none;
+}
+#CafeMenuWrapper li a {
+  display: block;
+  margin: 0px 5px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  .border-radius(0);
+  color: @gray;
+  &:hover {
+    color: @grayDark;
+    border-color: @grayLighter @grayLighter #ddd;
+    background-color: @grayLighter;
+  }
+}
+#CafeMenuWrapper li img {
+  display: none;
+}
+#CafeTitle {
+  margin-bottom: @baseLineHeight / 3;
+}
+#CafeTitle a {
+  font-size: @baseFontSize + 3;
+  letter-spacing: -1px;
+  font-weight: bold;
+  line-height: @baseLineHeight;
+  color: @grayDark;
+  text-transform: uppercase;
+}
+#CafeMenuWrapper .active > a {
+  color: @white;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+  background-color: @linkColor;
+}
+#CafeMenuWrapper {
+  background-color: transparent;
+  padding: 0px;
+}
+#CafeMenuList {
+  background-color: transparent;
+  padding: 0px;
+  ul {
+    padding: 0px;
+    margin: 0px;
+  }
+  li:first-child a {
+    .border-radius(8px 8px 0 0);
+  }
+  li:last-child a {
+    .border-radius(0 0 8px 8px);
+  }
+  li.CafeMenuText span {
+    display: block;
+    margin: 0px 5px;
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    .border-radius(0);
+    color: @gray;
+    vertical-align: initial;
+    background: @grayLighter + #0c0c0c;
+  }
+  li:first-child.CafeMenuText span {
+    .border-radius(8px 8px 0 0);
+  }
+  li.CafeMenuNotice a {
+    .menu_iconize((-24px * 12) (-24px * 0));
+  }
+  li.CafeMenuBoard a {
+    .menu_iconize((-24px * 11) (-24px * 0));
+  }
+  li.CafeMenuAnonym a {
+    .menu_iconize((-24px * 15) (-24px * 2));
+  }
+  li.CafeMenuLink a {
+    .menu_iconize((-24px * 5) (-24px * 3));
+  }
+  li.CafeMenuImage a {
+    .menu_iconize((-24px * 5) (-24px * 2));
+  }
+  li.CafeMenuProfile a {
+    .menu_iconize((-24px * 7) (-24px * 0));
+  }
+  li.CafeMenuSurvey a {
+    .menu_iconize((-24px * 17) (-24px * 0));
+  }
+  li.CafeMenuCalendar a {
+    .menu_iconize((-24px * 2) (-24px * 1));
+  }
+  li.CafeMenuForum a {
+    .menu_iconize((-24px * 11) (-24px * 1));
+  }
+  li.CafeMenuCafe a {
+    .menu_iconize((-24px * 19) (-24px * 4));
+  }
+  li.CafeMenuData a {
+    .menu_iconize((-24px * 8) (-24px * 0));
+  }
+}
+#CafeAdminWrapper {
+  ul {
+    margin: 0px;
+  }
+}
