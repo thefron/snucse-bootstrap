@@ -5,21 +5,26 @@
   font-weight: bold;
   border-bottom: 1px solid @grayLighter;
   padding-bottom: @baseFontSize / 2;
+  text-align: left;
   #font .shorthand(@baseFontSize + 5, normal, (@baseFontSize + 5) * 1.5);
+}
+#FavoriteAddWrapper {
+  text-align: right;
+  float: none;
 }
 #ViewFavoriteAddForm {
   img {
     display: none;
   }
   margin-right: 5px;
-  .menu_iconize((-24px * 5) 0);
+  .menu_iconize(5, 0);
 }
 #ArticleHead {
   border: 0;
 }
 #ArticleTitle {
   letter-spacing: -1px;
-  #font .shorthand(@baseFontSize + 7, bold, (@baseFontSize + 7) * 1.5);
+  #font .shorthand(@baseFontSize + 8, bold, (@baseFontSize + 8) * 1.5);
 }
 #ArticleNumber {
   color: @grayLight;
@@ -30,20 +35,32 @@
   color: @gray;
 }
 #ArticleContent {
+  clear: both;
   margin-left: @gridGutterWidth;
 }
 
-table.List {
+#BoardList {
   width: 100%;
-  margin-bottom: @baseLineHeight;
+  margin: @baseLineHeight 0px;
+  border: 1px solid #ddd;
+  border-collapse: separate; // Done so we can round those corners!
+  *border-collapse: collapsed; // IE7 can't round corners anyway
+  .border-radius(4px);
+  color: @grayDark;
+
+  a {
+    color: @grayDark;
+  }
+  
   // Cells
   th,
   td {
-    // padding: 8px;
-    padding: 4px 5px;
+    padding: 8px;
+    // padding: 4px 5px;
     line-height: @baseLineHeight;
     text-align: left;
     border-top: 1px solid #ddd;
+    height: auto;
   }
   th {
     font-weight: bold;
@@ -52,42 +69,18 @@ table.List {
   td {
     vertical-align: top;
   }
-  tr:nth-child(odd) td,
-  tr:nth-child(odd) th {
+  tbody tr:nth-child(odd) td,
+  tbody tr:nth-child(odd) th {
     background-color: #f9f9f9;
+  }
+  thead:first-child {
+    background: transparent !important;
   }
   // Remove top border from thead by default
   thead:first-child tr th,
   thead:first-child tr td {
     border-top: 0;
   }
-  // Account for multiple tbody instances
-  tbody + tbody {
-    border-top: 2px solid #ddd;
-  }
-}
-
-
-
-// CONDENSED TABLE W/ HALF PADDING
-// -------------------------------
-
-.table-condensed {
-  th,
-  td {
-    padding: 4px 5px;
-  }
-}
-
-
-// BORDERED VERSION
-// ----------------
-
-.table-bordered {
-  border: 1px solid #ddd;
-  border-collapse: separate; // Done so we can round those corners!
-  *border-collapse: collapsed; // IE7 can't round corners anyway
-  .border-radius(4px);
   th + th,
   td + td,
   th + td,
@@ -118,31 +111,160 @@ table.List {
   tbody:last-child tr:last-child td:last-child {
     .border-radius(0 0 4px 0);
   }
+  .ListNumber, .ListWriter, .ListDate, .ListView, .ListRecommend {
+    text-align: center;
+  }
 }
 
-
-// ZEBRA-STRIPING
-// --------------
-
-// Default zebra-stripe styles (alternating gray and transparent backgrounds)
-.table-striped {
-  tbody {
-    tr:nth-child(odd) td,
-    tr:nth-child(odd) th {
-      background-color: #f9f9f9;
+.TagList {
+  margin-top: 20px;
+  li:first-child {
+    .labelize(@orange);
+    padding: 1px 3px 2px 3px;
+    &::after {
+      content: 'Tag';
+    }
+    img {
+      display: none;
+    }
+  }
+  li:last-child {
+    .labelize(@infoText);
+    padding: 1px 3px 2px 3px;
+    a {
+      padding-right: 1px;
+      &::after {
+        content: '태그추가';
+      }
+    }
+    img {
+      display: none;
+    }
+  }
+  li {
+    .labelize(lighten(@gray, 15%));
+    padding: 1px 2px 2px 5px;
+    a {
+      font-size: @baseFontSize * .75;
+      line-height: @baseFontSize;
+      color: @white;
+    }
+    .RemoveTag {
+      font-size: 13px;
+      font-weight: normal;
+      line-height: @baseFontSize;
+      color: @white;
+      padding-right: 1px;
+      //text-shadow: 0 1px 0 rgba(255,255,255,1);
+      .opacity(70);
+      &::after {
+        content: 'x';
+        cursor: pointer;
+      }
+      &:hover {
+        color: @white;
+        text-decoration: none;
+        .opacity(90);
+        cursor: pointer;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+}
+#ArticleFooter {
+  #ArticleFooterImage {
+    display: none;
+  }
+  #ArticleFunction {
+    color: rgba(255,255,255,0);
+    a {
+      .buttonize();
     }
   }
 }
 
-
-
-// TABLE CELL SIZING
-// -----------------
-
-// Change the columns
-.tableColumns(@columnSpan: 1) {
-  float: none;
-  width: ((@gridColumnWidth) * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1)) - 16;
-  margin-left: 0;
+.Comment {
+  margin: 0px;
+  li {
+    padding: 5px;
+    border: 1px solid darken(@grayLighter, 5%) !important;
+    margin: 5px 0px;
+    // .transition(all .15s ease-in-out);
+  }
+  &>li {
+    .border-radius(4px);
+  }
+  .CommentReplys {
+    margin: 10px;
+    li {
+      margin: 0px;
+      margin-bottom: -1px;
+      background: lighten(@grayLighter, 5%);
+    }
+  }
 }
-
+.CommentHeader {
+  float: none;
+  width: auto;
+  border-bottom: 1px solid #EAEAE6;
+  padding-bottom: 3px;
+  display: block;
+  margin: 0px 5px;
+}
+.CommentReplys li .CommentHeader {
+  padding: 0px;
+  background: none;
+}
+.CommentRecommendation {
+  margin-right: 10px;
+}
+.CommentContent {
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+.Comment .Date {
+  font-size: 10px;
+  color: #777;
+}
+.CommentReply {
+  display: inline-block;
+  .menu_iconize(5, 3);
+  img {
+    display: none;
+  }
+}
+#CommentRecommendList {
+  background: transparent;
+  margin: 5px 0px;
+  padding: 0px;
+  border: none;
+  ul {
+    margin: 0px;
+  }
+  li {
+    background: #F9E5D9;
+    padding: 5px;
+    border: 1px solid darken(@grayLighter, 5%) !important;
+    margin: 5px 0px;
+    .border-radius(4px);
+  }
+}
+#CommentRecommendList li .CommentHeader {
+  padding: 0px;
+  background: none;
+  float: none;
+  width: auto;
+  border-bottom: 1px solid #EAEAE6;
+  padding-bottom: 3px;
+  display: block;
+  margin: 0px 5px;
+  .User {
+    &::before {
+      .labelize(@orange);
+      content: '베플';
+      margin-right: 5px;
+    }
+  }
+}

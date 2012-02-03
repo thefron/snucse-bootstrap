@@ -8,6 +8,7 @@
   margin: 0px;
   padding: 0px;
   z-index: @zindexFixedNavbar;
+  border-bottom-width: 0px;
 
   #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
 
@@ -61,18 +62,19 @@
 #SearchBoxWrapper {
   background: none;
   height: auto;
-  padding: floor((@navbarHeight - (@baseFontSize + 10)) / 2) 0px;
+  margin-top: 4px;
+  //padding: floor((@navbarHeight - (@baseFontSize + 10)) / 2) 0px;
   input.Keyword {
-    color: @grayLight;
-    padding: 0px 14px;
-    margin-bottom: 0; // remove the default margin on all inputs
-    @shadow: 0 0px 1px rgba(255,255,255,.15), inset 0 1px 1px rgba(0,0,0,.6);
+    color: @grayLighter;
+    padding: 4px 10px;
+    border: 1px solid #111;
+    @shadow: 0 1px 0px rgba(255,255,255,.15), inset 0 1px 2px rgba(0,0,0,.1);
     .box-shadow(@shadow);
     .border-radius(14px);
     background: @gray;
-    height: @baseFontSize + 10;
     &:focus {
-      color: @grayLighter;
+      background: @white;
+      color: @grayDark;
     }
   }
 }
@@ -81,11 +83,7 @@
   vertical-align: middle;
 }
 #Logout {
-  background: url('img/logout.png') no-repeat;
-  display: block;
-  .square(18px);
-  text-indent: -9999px;
-  margin: (@navbarHeight - 18)/2 5px;
+  .iconize('img/icons.png', 28px, -6);
   margin-right: 10px;
 }
 .iconize(@icon_url, @icon_size, @offset: 0) {
@@ -116,6 +114,9 @@
 }
 #FavoriteNavigation{
   .iconize('img/icons.png', 28px, -4);
+  ul {
+    text-indent: initial;
+  }
 }
 
 // Widget
