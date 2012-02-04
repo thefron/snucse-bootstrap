@@ -174,10 +174,19 @@
   }
 }
 #ArticleFooter {
+  height: 40px;
+  .wellize();
   #ArticleFooterImage {
     display: none;
   }
+  #ArticleFooterTab {
+    margin-top: 11px;
+  }
   #ArticleFunction {
+    position: static;
+    float: right;
+    margin-top: 6px;
+    margin-right: 10px;
     color: rgba(255,255,255,0);
     a {
       .buttonize();
@@ -185,16 +194,48 @@
   }
 }
 
-.Comment {
+ul.Comment {
   margin: 0px;
   li {
     padding: 5px;
     border: 1px solid darken(@grayLighter, 5%) !important;
     margin: 5px 0px;
-    // .transition(all .15s ease-in-out);
+    .CommentHeader {
+      float: none;
+      width: auto;
+      border-bottom: 1px solid #EAEAE6;
+      padding-bottom: 3px;
+      display: block;
+      margin: 0px 5px;
+      .Date {
+        font-size: 10px;
+        color: darken(@grayLight, 10%);
+      }
+    }
+    .CommentContent {
+      margin-top: 8px;
+      margin-bottom: 5px;
+    }
   }
-  &>li {
+  &> li {
     .border-radius(4px);
+    .CommentReply {
+      display: inline-block;
+      .menu_iconize(5, 3);
+      img {
+        display: none;
+      }
+    }
+    &.RecommendedComment {
+      background: fade(@blue, 10%) !important;
+      border: 1px solid fade(darken(@blue, 10%), 20%) !important;
+      &> .CommentHeader {
+        border-bottom: 1px solid fade(darken(@blue, 10%), 20%);
+      }
+      &> div {
+        background: transparent !important;
+      }
+    }
   }
   .CommentReplys {
     margin: 10px;
@@ -202,38 +243,31 @@
       margin: 0px;
       margin-bottom: -1px;
       background: lighten(@grayLighter, 5%);
+      .CommentHeader {
+        padding: 0px;
+        background: none;
+      }
+      &:first-child {
+        .border-radius(4px 4px 0 0);
+      }
+      &:last-child {
+        .border-radius(0 0 4px 4px);
+      }
+      &.RecommendedComment {
+        background: fade(@blue, 6%) !important;
+        border: 1px solid fade(darken(@blue, 10%), 20%) !important;
+        &> .CommentHeader {
+          border-bottom: 1px solid fade(darken(@blue, 10%), 20%);
+        }
+        &> div {
+          background: transparent !important;
+        }
+      }
     }
   }
 }
-.CommentHeader {
-  float: none;
-  width: auto;
-  border-bottom: 1px solid #EAEAE6;
-  padding-bottom: 3px;
-  display: block;
-  margin: 0px 5px;
-}
-.CommentReplys li .CommentHeader {
-  padding: 0px;
-  background: none;
-}
 .CommentRecommendation {
   margin-right: 10px;
-}
-.CommentContent {
-  margin-top: 8px;
-  margin-bottom: 5px;
-}
-.Comment .Date {
-  font-size: 10px;
-  color: #777;
-}
-.CommentReply {
-  display: inline-block;
-  .menu_iconize(5, 3);
-  img {
-    display: none;
-  }
 }
 #CommentRecommendList {
   background: transparent;
@@ -244,27 +278,67 @@
     margin: 0px;
   }
   li {
-    background: #F9E5D9;
+    background: fade(@blue, 20%);
     padding: 5px;
-    border: 1px solid darken(@grayLighter, 5%) !important;
+    border: 1px solid fade(darken(@blue, 10%), 20%) !important;
     margin: 5px 0px;
     .border-radius(4px);
+    .CommentHeader {
+      padding: 0px;
+      background: none;
+      float: none;
+      width: auto;
+      border-bottom: 1px solid fade(darken(@blue, 10%), 20%);
+      padding-bottom: 3px;
+      display: block;
+      margin: 0px 5px;
+      .User {
+        &::before {
+          .labelize(@orange);
+          content: '베플';
+          margin-right: 5px;
+        }
+      }
+    }
   }
 }
-#CommentRecommendList li .CommentHeader {
-  padding: 0px;
-  background: none;
-  float: none;
-  width: auto;
-  border-bottom: 1px solid #EAEAE6;
-  padding-bottom: 3px;
-  display: block;
-  margin: 0px 5px;
-  .User {
-    &::before {
-      .labelize(@orange);
-      content: '베플';
-      margin-right: 5px;
+#CommentWriteWrapper {
+  .wellize();
+  margin-bottom: 10px;
+  .RefreshComment {
+    float: none;
+    display: inline-block;
+    a {
+      padding-left: 1px;
+      .buttonize();
+      .menu_iconize(10, 1);
+      &::after {
+        content: 'Refresh';
+      }
+      img {
+        display: none;
+      }
     }
+  }
+  .CommentAddForm {
+    display: inline-block;
+    .TextBox {
+      background-color: @white;
+      margin-bottom: 0px;
+      width: 280px;
+    }
+  }
+}
+#ArticleController {
+  padding: 0px 10px;
+  background: transparent;
+  color: fade(@white, 0%);
+  a {
+    .buttonize();
+  }
+}
+#BoardListButtonWrapper {
+  a {
+    .buttonize();
   }
 }
