@@ -11,10 +11,13 @@ body {
 
 #WidgetWrapper {
   margin-top: @navbarHeight - 5;
-  margin-left: 0 - @gridGutterWidth;
+  //margin-left: 0 - @gridGutterWidth;
 }
 .WidgetColumn {
   .fluidColumns(4);
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 #CommonLeftMenu {

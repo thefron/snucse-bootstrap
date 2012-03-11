@@ -1,0 +1,18 @@
+.Widget {
+  margin: 15px 0;
+  border: 1px solid darken(@grayLighter, 5%);
+  #gradient > .vertical(@white, lighten(@grayLighter, 2%));
+  @shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+  .box-shadow(@shadow);
+  .border-radius(4px);
+
+  .WidgetHeader {
+    margin: 0px 10px;
+    padding: 5px;
+    border-bottom: 1px solid lighten(@grayLighter, 2%);
+    background: transparent;
+  }
+
+  &:hover {
+  }
+}

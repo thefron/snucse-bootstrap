@@ -416,24 +416,26 @@ body {
 }
 #WidgetWrapper {
   margin-top: 35px;
-  margin-left: -2.127659574%;
 }
 .WidgetColumn {
-  width: 31.24999999711979% !important;
+  width: 31.914893614% !important;
   float: left;
   margin-left: 2.127659574%;
+}
+.WidgetColumn:first-child {
+  margin-left: 0;
 }
 #CommonLeftMenu {
   padding: 0;
   margin: 0;
-  width: 14.58333333211979% !important;
+  width: 14.89361702% !important;
   float: left;
   margin-left: 2.127659574%;
 }
 #CommonContent {
   padding: 0;
   margin: 0;
-  width: 81.24999999211977% !important;
+  width: 82.97872339599999% !important;
   float: left;
   margin-left: 2.127659574%;
 }
@@ -677,7 +679,7 @@ body {
   width: 18px;
   height: 18px;
   display: block;
-  background-image: url('img/icons.png');
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/icons.png');
   background-position: -168px 0px;
   background-color: transparent;
   text-indent: -9999px;
@@ -690,7 +692,7 @@ body {
   width: 18px;
   height: 18px;
   display: block;
-  background-image: url('img/icons.png');
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/icons.png');
   background-position: -140px 0px;
   background-color: transparent;
   text-indent: -9999px;
@@ -702,7 +704,7 @@ body {
   width: 18px;
   height: 18px;
   display: block;
-  background-image: url('img/icons.png');
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/icons.png');
   background-position: -28px 0px;
   background-color: transparent;
   text-indent: -9999px;
@@ -714,7 +716,7 @@ body {
   width: 18px;
   height: 18px;
   display: block;
-  background-image: url('img/icons.png');
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/icons.png');
   background-position: -56px 0px;
   background-color: transparent;
   text-indent: -9999px;
@@ -726,7 +728,7 @@ body {
   width: 18px;
   height: 18px;
   display: block;
-  background-image: url('img/icons.png');
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/icons.png');
   background-position: 0px 0px;
   background-color: transparent;
   text-indent: -9999px;
@@ -738,7 +740,7 @@ body {
   width: 18px;
   height: 18px;
   display: block;
-  background-image: url('img/icons.png');
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/icons.png');
   background-position: -84px 0px;
   background-color: transparent;
   text-indent: -9999px;
@@ -750,7 +752,7 @@ body {
   width: 18px;
   height: 18px;
   display: block;
-  background-image: url('img/icons.png');
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/icons.png');
   background-position: -112px 0px;
   background-color: transparent;
   text-indent: -9999px;
@@ -834,7 +836,7 @@ body {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -120px 0px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1176,7 +1178,7 @@ ul.Comment > li .CommentReply::before {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -120px -72px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1190,6 +1192,7 @@ ul.Comment > li.RecommendedComment {
 }
 ul.Comment > li.RecommendedComment > .CommentHeader {
   border-bottom: 1px solid rgba(3, 120, 169, 0.2);
+  padding-left: 0px;
 }
 ul.Comment > li.RecommendedComment > div {
   background: transparent !important;
@@ -1387,7 +1390,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -240px -24px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1674,7 +1677,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -288px 0px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1684,7 +1687,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -264px 0px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1694,7 +1697,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -360px -48px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1704,7 +1707,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -120px -72px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1714,7 +1717,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -120px -48px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1724,7 +1727,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -168px 0px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1734,7 +1737,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -408px 0px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1744,7 +1747,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -48px -24px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1754,7 +1757,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -264px -24px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1764,7 +1767,7 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -456px -96px;
   vertical-align: -20%;
   margin-right: 5px;
@@ -1774,11 +1777,36 @@ ul.Comment .CommentReplys li.RecommendedComment > div {
   content: "";
   width: 14px;
   height: 14px;
-  background-image: url(img/glyphicons-halflings.png);
+  background-image: url('http://klassmating-thefron.s3.amazonaws.com/snucse_bootstrap/glyphicons-halflings.png');
   background-position: -192px 0px;
   vertical-align: -20%;
   margin-right: 5px;
 }
 #CafeAdminWrapper ul {
   margin: 0px;
+}
+.Widget {
+  margin: 15px 0;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+  background-image: -moz-linear-gradient(top, #ffffff, #f3f3f3);
+  background-image: -ms-linear-gradient(top, #ffffff, #f3f3f3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f3f3f3));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f3f3f3);
+  background-image: -o-linear-gradient(top, #ffffff, #f3f3f3);
+  background-image: linear-gradient(top, #ffffff, #f3f3f3);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f3f3f3', GradientType=0);
+  -webkit-box-shadow: inset 0 1px 0 #ffffff, 0 1px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 0 #ffffff, 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 0 #ffffff, 0 1px 5px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.Widget .WidgetHeader {
+  margin: 0px 10px;
+  padding: 5px;
+  border-bottom: 1px solid #f3f3f3;
+  background: transparent;
 }

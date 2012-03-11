@@ -2,12 +2,15 @@
 @gridColumnWidth: 6.382978723%;
 @gridGutterWidth: 2.127659574%;
 
-// Redeclare the mixins
-.gridColumn() {
+.columns(@fluidGridGutterWidth, @fluidGridColumnWidth, @columns) {
+  width: 1% * (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) !important;
+}
+.gridColumn(@fluidGridGutterWidth) {
   float: left;
-  margin-left: @gridGutterWidth;
-} 
+  margin-left: @fluidGridGutterWidth;
+}
+// Redeclare the mixins
 .fluidColumns(@columns: 1) {
-  width: @gridTotalWidth * ((((@gridGutterWidth+@gridColumnWidth)*@columns)-@gridGutterWidth)/(@gridRowWidth+@gridGutterWidth)) !important;
-  .gridColumn();
+  .columns(@gridGutterWidth, @gridColumnWidth, @columns);
+  .gridColumn(@gridGutterWidth);
 }
